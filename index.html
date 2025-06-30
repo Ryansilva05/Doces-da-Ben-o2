@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliçias Da Benção - Confeitaria Artesanal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#ff66b2',
+                        'secondary': '#000000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .logo-font {
+            font-family: 'Pacifico', cursive;
+        }
+        
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .zoom-effect {
+            transition: transform 0.3s ease;
+        }
+        
+        .zoom-effect:hover {
+            transform: scale(1.05);
+        }
+        
+        .pink-shadow {
+            box-shadow: 0 4px 20px rgba(255, 102, 178, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="logo-font text-3xl text-primary">Deliçias Da Benção</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-secondary hover:text-primary font-semibold transition">Home</a>
+                <a href="#sobre" class="text-secondary hover:text-primary font-semibold transition">Quem Somos</a>
+                <a href="#cardapio" class="text-secondary hover:text-primary font-semibold transition">Cardápio</a>
+                <a href="#contato" class="text-secondary hover:text-primary font-semibold transition">Contato</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-primary text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white absolute w-full shadow-lg px-4 pb-4 mt-2">
+            <a href="#home" class="block py-2 text-secondary hover:text-primary">Home</a>
+            <a href="#sobre" class="block py-2 text-secondary hover:text-primary">Quem Somos</a>
+            <a href="#cardapio" class="block py-2 text-secondary hover:text-primary">Cardápio</a>
+            <a href="#contato" class="block py-2 text-secondary hover:text-primary">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h2 class="logo-font text-5xl md:text-7xl mb-6 text-white">Deliçias Da Benção</h2>
+            <p class="text-xl md:text-2xl mb-8">Doces que enchem sua vida de alegria e sabor!</p>
+            <a href="#cardapio" class="bg-primary hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">Peça Agora</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Quem Somos</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-10">
+                <div class="lg:w-1/2">
+                    <img src="imagem7.jpeg" alt="Karina Pereira" class="rounded-lg shadow-xl w-full h-auto max-h-96 object-cover">
+                </div>
+                
+                <div class="lg:w-1/2 text-secondary">
+                    <h3 class="text-3xl font-bold mb-6 text-primary">Sobre Karina Pereira</h3>
+                    <p class="mb-4 text-lg">Meu nome é Karina Pereira, sou a confeiteira e proprietária da Delícias da Benção. Minha paixão por doces começou na cozinha da minha avó, onde aprendi receitas tradicionais que agora compartilho com meus clientes.</p>
+                    <p class="mb-4 text-lg">Formada em confeitaria artesanal, dedico meu trabalho a criar momentos doces e memoráveis. Cada criação é feita com muito amor e atenção aos detalhes, utilizando ingredientes de primeira qualidade.</p>
+                    <p class="mb-6 text-lg">Acredito que doces não são apenas sobremesas, mas sim expressões de carinho e celebração. É essa filosofia que me inspira todos os dias a criar produtos exclusivos para você e sua família.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
+                            <i class="fas fa-award text-primary mr-2"></i>
+                            <span>10+ anos de experiência</span>
+                        </div>
+                        <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
+                            <i class="fas fa-heart text-primary mr-2"></i>
+                            <span>Receitas com amor</span>
+                        </div>
+                        <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
+                            <i class="fas fa-seedling text-primary mr-2"></i>
+                            <span>Ingredientes naturais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="cardapio" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Nosso Cardápio</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Temos opções deliciosas para todos os gostos e ocasiões</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 zoom-effect">
+                    <img src="imagem2.jpeg" alt="Bolo de Chocolate" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Bolos de pote </h3>
+                        <p class="text-gray-600 mb-4">Deliciosos bolos no pote, servidos em copos transparentes com tampa.
+
+ Camadas de bolo de chocolate, brigadeiro, creme branco e morangos frescos.
+ Finalizado com chantilly de chocolate e meio morango por cima.
+ Rótulo personalizado da marca, ideal para venda direta ou lembrancinha.
+</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-primary">R$ 12,00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 zoom-effect">
+                    <img src="imagem6.jpeg" alt="Cupcake" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Bolo com cobertura</h3>
+                        <p class="text-gray-600 mb-4">Um bolo redondo clássico com cobertura rosa texturizada.
+                    
+ Decorado com chantilly rosa em forma de rosetas, morangos frescos e pérolas comestíveis.
+ No topo, um topper personalizado escrito “Parabéns Beth” em dourado com detalhes em rosa.
+ Um bolo delicado, feminino e perfeito para comemorações especiais.
+</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold text-lg">R$ 22,00</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 zoom-effect">
+                    <img src="imagem1.jpeg" alt="Brigadeiro Gourmet" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Bolo personalizado</h3>
+                        <p class="text-gray-600 mb-4">Bolo decorado com o tema de unicórnio super colorido e encantador.
+
+ Cobertura branca com detalhes em chantilly colorido formando flores.
+ Decoração com orelhinhas, chifre dourado e asas de papel com efeito arco-íris.
+ Toque especial com confeitos coloridos ao redor da base.
+ Ideal para festas infantis ou quem ama um toque mágico!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold text-lg">R$ 60,00</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 zoom-effect">
+                    <img src="imagem4.jpeg" alt="Brownie" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-secondary mb-2">Ovo da páscoa</h3>
+                        <p class="text-gray-600 mb-4"> Três ovos de colher artesanais decorados com morangos frescos, raspas de chocolate e pedaços de chocolate branco.
+ Sabores variados: brigadeiro com morango, leite ninho com morango e um recheio com cobertura cremosa de chocolate.
+</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold text-lg">R$ 35,00</span>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+            <div class="text-center mt-12">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">O Que Dizem Nossos Clientes</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                    <p class="italic mb-4">"Os doces da Karina são simplesmente divinos! O bolo de aniversário da minha filha foi o sucesso da festa. Super recomendo!"</p>
+                    <p class="font-bold">- Ana Carolina</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                    <p class="italic mb-4">"Depois que provei os brigadeiros da Delícias da Benção, nunca mais comprei em outro lugar. A qualidade é incomparável!"</p>
+                    <p class="font-bold">- Marcos Vinícius</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                    <p class="italic mb-4">"Atendimento impecável e doces maravilhosos! Sempre que preciso presentear alguém, encomendo aqui."</p>
+                    <p class="font-bold">- Juliana santos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Entre em Contato</h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Faça sua encomenda ou tire suas dúvidas</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-secondary font-medium mb-1">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-secondary font-medium mb-1">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-secondary font-medium mb-1">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-secondary font-medium mb-1">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full">Enviar Mensagem</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold text-secondary mb-6">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary mb-1">Endereço</h4>
+                                    <p class="text-gray-600">Rua visconde de jari, 197, Jardim Ângela</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary mb-1">Telefone</h4>
+                                    <p class="text-gray-600">(55) 11 98754-6722</p>
+                                    <p class="text-gray-600">(55) 11 98754-6722</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary mb-1">E-mail</h4>
+                                    <p class="text-gray-600">Karinesalvo1@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary mb-1">Horário de Funcionamento</h4>
+                                    <p class="text-gray-600">Segunda a Sàbado: 6h às 20h</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-secondary mb-4">Siga-nos nas Redes Sociais</h4>
+                            <div class="flex space-x-4">
+                                
+                                <a href="https://www.instagram.com/deliciasdabencao_?igsh=MWpwNTJ2b3R0ajUwZg==" class="bg-primary hover:bg-pink-600 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="http://wa.me/5511987546722/" class="bg-primary hover:bg-pink-600 text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="logo-font text-2xl text-primary">Deliçias Da Benção</h2>
+                    <p class="text-gray-300 mt-1">Doces com amor e dedicação</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p>&copy; 2021 Delícias Da Benção. Todos os direitos reservados.</p>
+                    <p class="text-gray-300">Desenvolvido com <i class="fas fa-heart text-primary"></i> por Agencia Tá ligado</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                mobileMenu.classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
